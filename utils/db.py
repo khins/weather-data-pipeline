@@ -9,7 +9,7 @@ import psycopg
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://weather_user:weather_password@localhost:5432/weather_data",
+    "postgresql://weather_user:weather_password@localhost:5433/weather_data",
 )
 SCHEMA_PATH = Path("db/schema.sql")
 

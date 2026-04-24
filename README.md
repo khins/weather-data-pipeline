@@ -15,6 +15,9 @@ Start a local Postgres database:
 docker compose up -d postgres
 ```
 
+The Docker database is exposed on host port `5433` so it can run alongside a
+native Postgres install on `5432`.
+
 ## Run
 
 ```bash
@@ -31,7 +34,7 @@ WEATHER_LATITUDE=29.7604 WEATHER_LONGITUDE=-95.3698 WEATHER_TIMEZONE=America/Chi
 The default database connection is:
 
 ```text
-postgresql://weather_user:weather_password@localhost:5432/weather_data
+postgresql://weather_user:weather_password@localhost:5433/weather_data
 ```
 
 Override it with `DATABASE_URL` when needed.

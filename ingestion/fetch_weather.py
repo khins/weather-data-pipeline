@@ -22,8 +22,8 @@ def fetch_weather(
     forecast_days: int = 7,
 ) -> dict[str, Any]:
     """Fetch hourly forecast data from Open-Meteo."""
-    latitude = latitude if latitude is not None else _env_float("WEATHER_LATITUDE", 41.8781)
-    longitude = longitude if longitude is not None else _env_float("WEATHER_LONGITUDE", -87.6298)
+    latitude = latitude if latitude is not None else _env_float("WEATHER_LATITUDE", 36.8509)
+    longitude = longitude if longitude is not None else _env_float("WEATHER_LONGITUDE", -92.2847)
     timezone = timezone or os.getenv("WEATHER_TIMEZONE", "America/Chicago")
 
     params = {
